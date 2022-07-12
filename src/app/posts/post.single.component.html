@@ -1,0 +1,14 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<section class="post-single" *ngIf="!isLoading">
+  <article id="{{post.id}}">
+      <h2 class="posts-title">
+        <a mat-button [routerLink]="['/posts', post.id]">
+          {{post.title}}
+          </a>
+        </h2>
+      <div>{{ post?.creator | uppercase }}</div>
+      <div class="posts-content">
+        {{post.content}}
+      </div>
+  </article>
+</section>
